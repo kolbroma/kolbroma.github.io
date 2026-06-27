@@ -1,0 +1,230 @@
+<!DOCTYPE html> 
+<html lang="ru"> 
+<head>     
+    <meta charset="UTF-8">     
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">     
+    <meta name="description" content="Фан-сайт культового сериала Lost (Остаться в живых). База данных DHARMA Initiative.">     
+    <meta name="keywords" content="Lost, Остаться в живых, сериал, Dharma, Океаник 815">     
+    <meta name="author" content="Колб Роман">     
+    <title>LOST</title> 
+
+    <!-- Подключение внешнего файла стилей -->
+    <link rel="stylesheet" href="style.css">
+</head> 
+<body>     
+    <!-- Шапка макета -->
+    <header id="top" class="main-header">         
+        <h1 class="glitch-title">Сериал LOST</h1>         
+        <nav class="navigation">             
+            <ul class="nav-list">                 
+                <li><a href="#about">О сериале</a></li>                 
+                <li><a href="#characters">Выжившие</a></li>                 
+                <li><a href="#media">Медиа</a></li>                 
+                <li><a href="#stations">Станции на острове</a></li>
+                <li><a href="#auth">Регистрация / Вход</a></li>             
+            </ul>         
+        </nav>         
+        <hr>     
+    </header>      
+
+    <!-- Основная резиновая и адаптивная сетка -->
+    <main class="main-grid-container">         
+        
+        <!-- БЛОК 1: О сериале -->
+        <section id="about" class="content-section layout-block-1">             
+            <h2>О сериале &laquo;Остаться в живых&raquo;</h2>                          
+            <p><strong>Lost</strong> &mdash; культовый американский телесериал, лауреат премий &laquo;Эмми&raquo; и &laquo;Золотой глобус&raquo;.</p>             
+            <p>Рейс <em class="flight-num">Oceanic 815</em>, летевший из Сиднея в Лос-Анджелес, потерпел крушение на таинственном острове. <br>             
+            <s class="strike-text">Они думали, что спасатели прибудут через пару дней...</s> <br>             
+            <u class="alert-text">Но остров скрывал множество мистических тайн.</u></p>         
+        </section>          
+
+        <!-- БЛОК 2: Выжившие -->
+        <section id="characters" class="content-section layout-block-2">             
+            <h2>Ключевые персонажи</h2>                          
+            <figure class="image-wrapper">                 
+                <img src="media/photo.jpg" alt="Логотип" class="dharma-logo" width="300">             
+            </figure>              
+            
+            <h3>Группы выживших:</h3>             
+            <ul class="survivors-list">                 
+                <li class="list-item"><strong>Лидеры лагеря:</strong>                     
+                    <ol class="leaders-list">                         
+                        <li>Джек Шепард (Спинальный хирург)</li>                         
+                        <li>Джон Локк (Охотник и философ)</li>                     
+                    </ol>                 
+                </li>                 
+                <li class="list-item"><strong>Остальные важные герои:</strong> Хьюго Рейес, Кейт Остин, Джеймс Форд.</li>             
+            </ul>         
+        </section>          
+
+        <!-- БЛОК 3: Медиа -->
+        <section id="media" class="content-section layout-block-3">             
+            <h2>Медиа</h2>                          
+            
+            <h3>Саундтрек из первой серии - The Eyeland</h3>              
+            <audio controls class="custom-audio">                 
+                <source src="media/audio.mp3" type="audio/mpeg">                 
+                Ваш браузер не поддерживает встроенное аудио.
+            </audio>              
+            
+            <br><br>              
+            
+            <h3>Видео</h3>             
+            <p>Ориентационный фильм станции &laquo;Лебедь&raquo; (YouTube):</p>             
+            
+            <!-- Интегрированный рабочий плеер YouTube -->
+            <div class="video-wrapper">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/BpE0p4S7r44?si=9I296epK03UCkigx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </section>          
+
+        <!-- БЛОК 4: Станции и Авторизация/Регистрация -->
+        <div class="layout-block-4">
+            <section id="stations" class="content-section">             
+                <h2>Станции DHARMA Initiative</h2>                          
+                <table border="1" class="dharma-table">                 
+                    <caption>Исследовательские станции</caption>                 
+                    <thead>                     
+                        <tr>                         
+                            <th>№</th>                         
+                            <th>Название станции</th>                         
+                            <th>Назначение</th>                         
+                            <th>Статус к концу сериала</th>                     
+                        </tr>                 
+                    </thead>                 
+                    <tbody>                     
+                        <tr>                         
+                            <td>1</td>                         
+                            <td>&laquo;Лебедь&raquo;</td>                         
+                            <td>Изучение электромагнетизма (ввод кода каждые 108 минут)</td>                         
+                            <td rowspan="2" class="status-destroyed">Уничтожена (Взрыв)</td>                     
+                        </tr>                     
+                        <tr>                         
+                            <td>2</td>                         
+                            <td>&laquo;Пламя&raquo;</td>                         
+                            <td>Связь с внешним миром</td>                     
+                        </tr>                     
+                        <tr>                         
+                            <td>3</td>                         
+                            <td>&laquo;Жемчужина&raquo;</td>                         
+                            <td colspan="2" class="status-abandoned">Психологическое наблюдение за другими станциями (Заброшена)</td>                     
+                        </tr>                 
+                    </tbody>             
+                </table>         
+            </section>
+
+            <section id="auth" class="content-section form-section">
+                <div class="forms-wrapper">
+                    <!-- форма регистрации -->
+                    <div class="form-box">
+                        <h3>Регистрация</h3>
+                        <form action="#" method="POST">
+                            <label for="username">Имя пользователя:</label><br>
+                            <input type="text" id="username" name="username" class="input-field" required>
+                            <br>
+
+                            <label for="email">Email:</label><br>
+                            <input type="email" id="email" name="email" class="input-field" required>
+                            <br>
+
+                            <label for="password">Пароль:</label><br>
+                            <input type="password" id="password" name="password" class="input-field" required>
+                            <br>
+
+                            <button type="submit" class="btn submit-btn">Зарегистрироваться</button>
+                        </form>
+                    </div>
+
+                    <!-- форма авторизации -->
+                    <div class="form-box">
+                        <h3>Вход на сайт</h3>
+                        <form action="#" method="POST">
+                            <label for="login_email">Email:</label><br>
+                            <input type="email" id="login_email" name="login_email" class="input-field" required>
+                            <br>
+
+                            <label for="login_password">Пароль:</label><br>
+                            <input type="password" id="login_password" name="login_password" class="input-field" required>
+                            <br>
+
+                            <button type="submit" class="btn login-btn">Войти</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- БЛОК 5: Микросетка Форма заказа -->
+        <div class="layout-block-5">
+            <div class="order-container">
+                <div class="order-header">
+                    <span>Заказать</span>
+                    <button class="order-close">×</button>
+                </div>
+                <form class="order-body">
+                    <div class="product-info">
+                        <p>Блендер</p>
+                        <p>Стоимость: 1 000 ₽</p>
+                    </div>
+
+                    <label>Цвет</label>
+                    <select>
+                        <option>Красный</option>
+                        <option>Черный</option>
+                    </select>
+
+                    <label>Ваше Имя</label>
+                    <input type="text" placeholder="Ваше Имя">
+
+                    <label>Email *</label>
+                    <input type="email" placeholder="Email *" required>
+
+                    <label>Телефон *</label>
+                    <input type="tel" placeholder="Телефон *" required>
+
+                    <div class="order-agreement">
+                        <input type="checkbox" id="check">
+                        <label for="check">Я принимаю условия <a href="#">политики обработки персональных данных</a></label>
+                    </div>
+
+                    <a href="http://idz2.by/" class="order-submit" style="text-decoration: none; text-align: center; display: block;">Оформить заявку</a>
+                </form>
+            </div>
+        </div>
+
+        <!-- БЛОК 6: Микросетка Карточка товара -->
+        <div class="layout-block-6">
+            <div class="corgi-card">
+                <div class="corgi-img-box">
+                    <!-- Подключение вашего файла корги.png -->
+                    <img src="корги.png" alt="Корги">
+                </div>
+                <div class="corgi-content">
+                    <h3 class="corgi-title">Подарочный набор "Корги"</h3>
+                    <p class="meta">330 мл, OZ</p>
+                    <div class="prices">
+                        <span class="price-new">18,80 руб.</span>
+                        <span class="price-old">19,79 руб.</span>
+                    </div>
+                    <div class="corgi-footer">
+                        <span class="discount">-5%</span>
+                        <span class="points">💎 0,19</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>      
+    
+    <!-- Подвал макета -->
+    <footer style="background-color: #000; padding: 20px; text-align: center; border-top: 2px solid #333; margin-top: 40px;">         
+        <hr>         
+        <p>&copy; 2024 Фан-сайт сериала LOST.</p>         
+        <p>Полезные ссылки:              
+            <a href="https://ru.wikipedia.org/wiki/Остаться_в_живых_(телесериал)" target="_blank" rel="noopener noreferrer" class="footer-link">Wikipedia (LOST)</a>         
+        </p>         
+        <p><a href="#top" class="scroll-top">&uarr; Вернуться к началу страницы</a></p>     
+    </footer> 
+</body> 
+</html>

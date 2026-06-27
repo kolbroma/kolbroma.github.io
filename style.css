@@ -1,0 +1,378 @@
+/* ИМПОРТ ШРИФТОВ */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Roboto:ital,wght@0,300;0,400;0,700;1,400&display=swap');
+
+/* --- 1. СТИЛИ ИЗ ЛР №4 (БЕЗ ИЗМЕНЕНИЙ) --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #121212;
+    color: #e0e0e0;
+    font-family: 'Roboto', sans-serif; 
+    line-height: 1.6;
+}
+
+h1, h2, h3, caption {
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 2px;
+}
+
+.content-section {
+    background-color: #1e1e1e;
+    padding: 30px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+#top {
+    background: linear-gradient(180deg, #000000, #1a1a1a);
+    padding: 40px 0 20px 0;
+    text-align: center;
+    border-bottom: 3px solid #4CAF50;
+}
+
+#top h1 {
+    color: #4CAF50 !important;
+    font-size: 3rem; 
+    text-shadow: 2px 2px 0px #000, 0 0 15px rgba(76, 175, 80, 0.8);
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+strong { font-weight: 700; color: #fff; }
+.flight-num { font-style: italic; color: #4CAF50; }
+.strike-text { text-decoration: line-through; color: #888; }
+.alert-text { 
+    text-decoration: underline wavy #ff4444;
+    color: #ff9900;
+}
+
+.nav-list > li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.nav-list a {
+    color: #cccccc;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-family: 'Orbitron', sans-serif;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.nav-list a:hover {
+    color: #4CAF50;
+    text-shadow: 0 0 8px #4CAF50;
+}
+
+.image-wrapper {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.dharma-logo {
+    width: 250px; 
+    height: 250px;
+    border-radius: 50%;
+    border: 5px dashed #4CAF50;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0px 0px 25px rgba(76, 175, 80, 0.6);
+    object-fit: contain;
+}
+
+.survivors-list {
+    margin-left: 20px;
+}
+
+.survivors-list > li {
+    list-style: none; 
+    margin-bottom: 15px;
+    position: relative;
+    padding-left: 30px;
+}
+
+.leaders-list {
+    margin-top: 10px;
+    margin-left: 20px;
+    color: #4CAF50; 
+}
+.leaders-list li {
+    color: #e0e0e0; 
+}
+
+.dharma-table {
+    width: 100%;
+    border-collapse: collapse; 
+    background-color: #2a2a2a;
+    margin-top: 15px;
+}
+
+.dharma-table caption {
+    font-size: 1.5rem;
+    color: #ff9900;
+    margin-bottom: 10px;
+}
+
+.dharma-table th, .dharma-table td {
+    border: 1px solid #555;
+    padding: 12px;
+    text-align: center;
+}
+
+.dharma-table th {
+    background-color: #1a1a1a;
+    color: #4CAF50;
+    text-transform: uppercase;
+}
+
+thead + tbody tr:hover {
+    background-color: #333;
+}
+
+.status-destroyed { background-color: rgba(255, 68, 68, 0.2); color: #ff4444;}
+.status-abandoned { background-color: rgba(255, 153, 0, 0.2); color: #ff9900;}
+
+.forms-wrapper {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.form-box {
+    background-color: #252525;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #4CAF50;
+    width: 45%;
+    min-width: 250px;
+}
+
+.form-box h3 { margin-bottom: 15px; text-align: center; color: #4CAF50;}
+.form-box label { display: block; margin-bottom: 5px; font-size: 0.9rem;}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px; 
+    border: 2px solid #555;
+    border-radius: 4px;
+    background-color: #1a1a1a;
+    color: #fff;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="tel"]:focus {
+    border-color: #4CAF50;
+}
+
+.btn {
+    width: 100%;
+    padding: 12px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.submit-btn { background-color: #4CAF50; color: #000; }
+.login-btn { background-color: #ff9900; color: #000; }
+
+.btn {
+    transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 8px 15px rgba(255, 255, 255, 0.2);
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
+
+.alert-text {
+    display: inline-block;
+    padding: 2px 5px;
+    border-radius: 3px;
+    animation: pulseGlow 2s infinite alternate; 
+}
+
+@keyframes pulseGlow {
+    0% {
+        background-color: rgba(255, 153, 0, 0.1);
+        box-shadow: 0 0 5px rgba(255, 153, 0, 0.3);
+    }
+    100% {
+        background-color: rgba(255, 153, 0, 0.3);
+        box-shadow: 0 0 15px rgba(255, 153, 0, 0.7);
+    }
+}
+
+/* --- 2. СТИЛИ МИКРОСЕТОК --- */
+
+/* Стили формы заказа (Блок 5) */
+.order-container {
+    width: 100%;
+    background: white;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.order-header {
+    background: #e69138;
+    color: white;
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+}
+
+.order-close { background: none; border: none; color: white; font-size: 20px; cursor: pointer; }
+.order-body { padding: 20px; display: flex; flex-direction: column; gap: 5px; }
+.product-info { font-size: 13px; margin-bottom: 10px; line-height: 1.4; color: #333; }
+.order-body label { font-size: 12px; font-weight: bold; margin-top: 10px; color: #444; display: block;}
+
+.order-body input, .order-body select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 14px;
+    width: 100%;
+    background: #fff;
+    color: #333;
+}
+
+.order-agreement { display: flex; gap: 8px; font-size: 11px; margin: 15px 0; align-items: flex-start; }
+.order-agreement input { width: auto; }
+.order-submit {
+    background: #e69138;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: none;
+}
+
+/* Стили карточки товара (Блок 6) */
+.corgi-card {
+    width: 100%;
+    background: white;
+    padding: 15px;
+    border: 1px solid #eee;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    color: #333;
+}
+
+.corgi-img-box img { width: 100%; height: auto; display: block; margin: 0 auto;}
+.corgi-title { color: #d87c7c; font-size: 16px; margin: 10px 0 5px; font-weight: normal; font-family: 'Segoe UI', sans-serif; letter-spacing: 0;}
+.meta { color: #999; font-size: 13px; margin-bottom: 10px; }
+.prices { margin-bottom: 10px; }
+.price-new { color: #d87c7c; font-weight: bold; font-size: 18px; }
+.price-old { color: #bbb; text-decoration: line-through; font-size: 14px; margin-left: 8px; }
+.corgi-footer { display: flex; align-items: center; gap: 10px; }
+.discount { background: #fff2cc; color: #bf9000; padding: 2px 5px; border-radius: 3px; font-size: 12px; }
+.points { font-size: 12px; color: #666; }
+
+
+/* --- 3. РЕЗИНОВАЯ СЕТКА И АДАПТИВНОСТЬ ЧЕРЕЗ CSS GRID --- */
+
+/* Базовый десктопный вариант (Ширина 100% от окна) */
+.main-grid-container {
+    display: grid;
+    width: 100%;
+    margin: 0 auto;
+    /* Условия распределения ширины колонок: 30% / 40% / 30% */
+    grid-template-columns: 30% 40% 30%;
+    grid-template-rows: auto;
+    /* Размещение блоков по именованной сетке */
+    grid-template-areas: 
+        "b1 b4 b5"
+        "b2 b4 b6"
+        "b3 b4 .";
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Привязка блоков к сетке */
+.layout-block-1 { grid-area: b1; }
+.layout-block-2 { grid-area: b2; }
+.layout-block-3 { grid-area: b3; }
+.layout-block-4 { grid-area: b4; }
+.layout-block-5 { grid-area: b5; }
+.layout-block-6 { grid-area: b6; }
+
+/* Фикс адаптивности iframe видео */
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+}
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* Планшетный вариант (481px — 768px) */
+@media (max-width: 768px) {
+    .main-grid-container {
+        grid-template-columns: 50% 50%;
+        grid-template-areas: 
+            "b1 b4"
+            "b2 b4"
+            "b3 b6"
+            "b5 b6";
+        gap: 15px;
+        padding: 15px;
+    }
+}
+
+/* Мобильный телефон (320px — 480px) */
+@media (max-width: 480px) {
+    .main-grid-container {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+            "b1 b1"
+            "b2 b2"
+            "b3 b3"
+            "b4 b4"
+            "b5 b6"; /* Блоки 5 и 6 стоят бок о бок внизу */
+        gap: 10px;
+        padding: 10px;
+    }
+    
+    #top h1 {
+        font-size: 2rem;
+    }
+    
+    .forms-wrapper {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .form-box {
+        width: 100%;
+    }
+}

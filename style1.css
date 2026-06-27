@@ -1,0 +1,905 @@
+/* Базовые сбросы */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #000;
+    color: #fff;
+}
+
+.container {
+    max-width: 1440px; /* Ширина контента при макете 1920 */
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+/* --- ВЕРХНЯЯ ЛИНИЯ --- */
+.header__top {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 12px 0;
+}
+
+.header__top-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__address {
+    font-weight: 500;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #BBBBBB;
+}
+
+.header__top-nav {
+    display: flex;
+    gap: 32px;
+}
+
+.header__top-link {
+    font-weight: 500;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.header__top-link img {
+    width: 18px;
+}
+
+/* --- ОСНОВНАЯ ЛИНИЯ --- */
+.header__main {
+    padding: 25px 0;
+}
+
+.header__main-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Блок бренда (Лого + Текст в ряд) */
+.header__brand {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.header__logo {
+    height: 60px; /* Размер логотипа */
+}
+
+.header__brand-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.header__title {
+    font-weight: 700;
+    font-size: 30px;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+/* Вертикальная палочка-разделитель */
+.header__divider {
+    width: 1px;
+    height: 32px;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.header__subtitle {
+    font-weight: 300;
+    font-size: 18px;
+    white-space: nowrap;
+}
+
+/* Блок контактов */
+.header__contacts {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.header__phone-block {
+    text-align: right;
+}
+
+.header__phone {
+    font-weight: 500;
+    font-size: 20px;
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.header__status {
+    font-weight: 300;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 6px;
+}
+
+.header__status span {
+    color: #4CAF50; /* Зеленая точка */
+    font-size: 12px;
+}
+
+/* Кнопка */
+.header__btn img {
+    display: block;
+    height: 50px;
+}
+
+.header__btn:hover {
+    opacity: 0.8;
+}
+
+/* --- HERO СЕКЦИЯ --- */
+.hero {
+    background-color: #000; /* Цвет на случай, если картинка не найдена */
+    background-image: url('media/hero.png'); /* Проверьте, что в папке media файл именно .png */
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: cover;
+    min-height: 850px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+/* --- СЕКЦИЯ КРЕДИТ --- */
+.credit {
+    background-color: #111;
+    /* ВАЖНО: Если файл называется "горы.png", переименуйте его в "mountains.png" 
+       латиницей, чтобы браузер его точно прочитал. Ниже исправленный путь: */
+    background-image: url('media/горы.png'); 
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    padding: 100px 0;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+}
+
+/* Исправление для мобильной версии в медиа-запросе */
+@media (max-width: 480px) {
+    .hero {
+        min-height: 500px;
+        /* Добавляем градиент поверх картинки для читаемости текста */
+        background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('media/hero.png');
+        background-position: center;
+    }
+}
+
+/* --- СЕКЦИЯ С МАШИНОЙ --- */
+.offer {
+    padding: 100px 0;
+    background-color: #111; /* Чуть светлее чисто черного для объема */
+}
+
+.offer__main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 60px;
+    position: relative;
+}
+
+.offer__label {
+    color: #ff8c00;
+    font-weight: 500;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.offer__title {
+    font-weight: 700;
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.offer__promo {
+    font-weight: 500;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.offer__warning {
+    display: inline-block;
+    background: #ff3b30;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-bottom: 40px;
+}
+
+.offer__btns {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.offer__btns img {
+    height: 50px;
+    width: auto;
+}
+
+/* Визуальная часть с машиной */
+.offer__image-block {
+    position: relative;
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.offer__car-img {
+    max-width: 100%;
+    height: auto;
+}
+
+.offer__badge {
+    position: absolute;
+    top: -20px;
+    right: 150px;
+    height: 80px;
+}
+
+.offer__colors {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 150px;
+}
+
+/* КАРТОЧКИ */
+.offer__features {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.feature-card {
+    background: #1c1c1c;
+    padding: 25px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.feature-card img {
+    width: 30px;
+    height: 30px;
+}
+
+.feature-card p {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.3;
+}
+
+/* ГАЛЕРЕЯ */
+.offer__gallery {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+}
+
+.offer__gallery img {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* --- ОБЩИЕ СТИЛИ ДЛЯ БЛОКОВ OFFER --- */
+.offer {
+    padding: 80px 0;
+    background-color: #1a1d1f; /* Темно-серый фон как на макете */
+}
+
+/* Модификатор для разворота: меняем порядок Flex */
+.offer--reverse .offer__main {
+    flex-direction: row-reverse;
+}
+
+.offer__main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+    gap: 40px;
+}
+
+.offer__content {
+    flex: 0 0 450px;
+}
+
+.offer__label {
+    color: #ff8c00;
+    font-weight: 500;
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.offer__title {
+    font-weight: 700;
+    font-size: 40px;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+}
+
+.offer__promo {
+    font-weight: 500;
+    font-size: 30px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+/* Красная плашка */
+.offer__warning {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #ff3b30;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 35px;
+    text-transform: uppercase;
+}
+
+.offer__btns {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.offer__btns img {
+    height: 48px;
+    width: auto;
+    border-radius: 4px;
+}
+
+/* Визуальная часть (Машина + Акценты) */
+.offer__image-block {
+    position: relative;
+    flex: 1;
+}
+
+.offer__car-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.offer__badge {
+    position: absolute;
+    top: -30px;
+    right: 40px;
+    height: 90px;
+}
+
+/* Вертикальные точки выбора цвета */
+.offer__colors-vertical {
+    position: absolute;
+    left: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.offer--reverse .offer__colors-vertical {
+    left: auto;
+    right: -20px; /* Если нужно сместить точки в обратную сторону */
+}
+
+/* ЯЧЕЙКИ ПРЕИМУЩЕСТВ */
+.offer__features {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.feature-card {
+    background: #242729; /* Фон ячейки */
+    padding: 20px;
+    border-radius: 10px; /* Скругление 10px */
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.feature-card img {
+    width: 24px;
+    height: 24px;
+}
+
+.feature-card p {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.3;
+}
+
+/* ГАЛЕРЕЯ */
+.offer__gallery {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+}
+
+.offer__gallery img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px; /* Скругление картинок 10px */
+}
+
+.offer__warning img {
+    display: block;
+    height: 28px; /* Отрегулируй высоту под макет, если картинка слишком большая/маленькая */
+    width: auto;
+}
+
+.selection { padding: 80px 0; background: #0b0b0b; }
+.selection__title { font-weight: 700; font-size: 40px; text-align: center; margin-bottom: 50px; text-transform: uppercase; }
+
+/* Фильтры */
+.selection__filters { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-bottom: 50px; }
+.filter-group label { display: block; font-weight: 300; font-size: 14px; color: #888; margin-bottom: 8px; }
+.filter-group select { 
+    width: 100%; background: #1c1c1c; border: 1px solid #333; padding: 18px; 
+    color: #fff; border-radius: 5px; font-family: 'Inter', sans-serif;
+}
+
+/* Карточка */
+.selection__list { display: flex; flex-direction: column; gap: 24px; }
+.config-card { 
+    border: 1px solid #333; border-radius: 12px; padding: 40px; 
+    display: flex; align-items: center; gap: 50px; background: #111; 
+}
+
+.config-card__img { flex: 0 0 380px; }
+.config-card__img img { width: 100%; }
+
+.config-card__info { flex: 1; }
+.config-card__name { font-weight: 700; font-size: 30px; margin-bottom: 8px; }
+.config-card__specs { font-weight: 300; font-size: 18px; color: #999; margin-bottom: 25px; }
+
+.config-card__price { 
+    font-weight: 700; font-size: 24px; text-decoration: line-through; 
+    color: #fff; margin-bottom: 20px; 
+}
+
+.config-card__benefits { display: flex; flex-direction: column; gap: 12px; }
+.benefit-item { display: flex; align-items: center; gap: 10px; font-weight: 500; font-size: 16px; color: #fff; }
+.benefit-item img { width: 22px; }
+
+/* Кнопки */
+.config-card__actions { display: flex; flex-direction: column; gap: 15px; }
+
+/* РЕДАКТИРУЕМ РАЗМЕР КНОПОК */
+.btn-offer img { height: 60px; width: auto; display: block; } /* Оранжевая больше */
+.btn-test img { height: 45px; width: auto; display: block; }  /* Тест-драйв стандартная */
+
+.selection__more { margin-top: 60px; text-align: center; }
+.selection__more img { height: 50px; }
+
+/* --- СЕКЦИЯ КРЕДИТ --- */
+.credit {
+    background: url('media/горы.png') no-repeat center center;
+    background-size: cover;
+    padding: 100px 0;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+}
+
+.credit__inner {
+    max-width: 600px;
+}
+
+.credit__title {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.credit__subtitle {
+    font-weight: 300;
+    font-size: 18px;
+    margin-bottom: 45px;
+    color: #fff;
+}
+
+/* Форма */
+.credit__label {
+    display: block;
+    font-weight: 300;
+    font-size: 14px;
+    color: #ccc;
+    margin-bottom: 10px;
+}
+
+.credit__form-row {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.credit__input {
+    background: rgba(255, 255, 255, 0.1); /* Полупрозрачный фон */
+    border: 1px solid #555;
+    border-radius: 5px;
+    padding: 18px 20px;
+    color: #fff;
+    font-size: 18px;
+    width: 320px;
+    outline: none;
+}
+
+.credit__input::placeholder {
+    color: #888;
+}
+
+/* Кнопка */
+.credit__submit {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.credit__submit img {
+    height: 60px; /* Высота как у инпута + отступы */
+    display: block;
+}
+
+/* Чекбокс */
+.credit__privacy {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.credit__privacy span {
+    font-weight: 300;
+    font-size: 12px;
+    color: #bbb;
+}
+
+.credit__checkbox {
+    width: 16px;
+    height: 16px;
+    accent-color: #ff8c00; /* Цвет галочки */
+}
+
+/* --- ФУТЕР --- */
+.footer {
+    background-color: #000;
+    padding: 60px 0 40px;
+    color: #fff;
+}
+
+.footer__divider {
+    width: 100%;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.1);
+    margin-bottom: 40px;
+}
+
+.footer__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 40px;
+}
+
+/* Блок бренда */
+.footer__brand-title {
+    font-weight: 500; /* Medium */
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.footer__brand-subtitle {
+    font-weight: 300; /* Light */
+    font-size: 14px;
+    color: #888;
+}
+
+/* Контакты (как в хедере) */
+.footer__phone-block {
+    text-align: right;
+    margin-right: 40px;
+}
+
+.footer__contacts {
+    display: flex;
+    align-items: center;
+}
+
+.footer__phone {
+    font-weight: 500;
+    font-size: 20px;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.footer__status {
+    font-weight: 300;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 6px;
+}
+
+.footer__status span { color: #4CAF50; font-size: 10px; }
+
+.footer__btn img { height: 50px; }
+
+/* Адрес и ссылки */
+.footer__row--nav {
+    align-items: center;
+}
+
+.footer__address {
+    font-weight: 500; /* Medium */
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #ccc;
+}
+
+.footer__address img { width: 16px; }
+
+.footer__links {
+    display: flex;
+    gap: 40px;
+}
+
+.footer__link {
+    font-weight: 500;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.footer__link img { width: 18px; }
+
+/* Юр. инфо */
+.footer__row--legal {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 40px;
+}
+
+.footer__legal-title {
+    font-weight: 300;
+    font-size: 14px;
+    color: #666;
+}
+
+.footer__legal-text {
+    font-weight: 300; /* Light */
+    font-size: 16px;
+    color: #fff;
+}
+
+/* Копирайт */
+.footer__bottom {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+
+.footer__copy {
+    font-weight: 300; /* Light */
+    font-size: 16px;
+    color: #666;
+}
+
+.footer__bottom-links {
+    display: flex;
+    gap: 30px;
+}
+
+.footer__bottom-links a {
+    font-weight: 300;
+    font-size: 16px;
+    color: #666;
+}
+
+.footer__bottom-links a:hover { color: #fff; }
+
+a {
+    text-decoration: none;
+    color: inherit; /* Ссылка будет брать цвет родительского текста */
+}
+
+/* --- АДАПТИВНАЯ ВЕРСТКА --- */
+
+/* 1. Планшеты и небольшие экраны (от 480px до 1024px) */
+@media (max-width: 1024px) {
+    .container {
+        padding: 0 20px;
+    }
+
+    .header__title {
+        font-size: 22px;
+    }
+
+    .hero {
+        min-height: 600px;
+        background-position: center right -200px; /* Сдвигаем машину, чтобы не мешала тексту */
+    }
+
+    .offer__features {
+        grid-template-columns: repeat(2, 1fr); /* 2 колонки вместо 4 */
+    }
+
+    .offer__gallery {
+        grid-template-columns: repeat(3, 1fr); /* 3 колонки вместо 5 */
+    }
+
+    .selection__filters {
+        grid-template-columns: 1fr 1fr; /* Фильтры в 2 колонки */
+    }
+
+    .config-card {
+        flex-direction: column; /* Карточка машины становится вертикальной */
+        gap: 20px;
+        text-align: center;
+    }
+
+    .config-card__img {
+        flex: 0 0 auto;
+        width: 100%;
+    }
+
+    .benefit-item {
+        justify-content: center;
+    }
+}
+
+/* 2. Планшеты (узкий диапазон 480px - 800px, ширина 720px) */
+@media (max-width: 800px) {
+    .header__top-inner {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .header__main-inner {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .offer__main, .offer--reverse .offer__main {
+        flex-direction: column; /* Машина и текст встают друг под друга */
+        text-align: center;
+    }
+
+    .offer__content {
+        flex: none;
+        width: 100%;
+    }
+
+    .offer__btns {
+        align-items: center;
+    }
+
+    .offer__image-block {
+        justify-content: center;
+    }
+
+    .offer__badge {
+        right: 0;
+    }
+
+    .footer__row {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .footer__phone-block {
+        text-align: center;
+        margin-right: 0;
+    }
+}
+
+/* 3. Мобильные телефоны (менее 480px) */
+@media (max-width: 480px) {
+    .header__top {
+        display: none; /* Скрываем верхнюю полоску на мобилках для экономии места */
+    }
+
+    .header__title {
+        font-size: 18px;
+    }
+
+    .header__subtitle {
+        font-size: 14px;
+    }
+
+    .header__divider {
+        display: none; /* Убираем палочку-разделитель */
+    }
+
+    .hero {
+        min-height: 500px;
+        background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('media/hero.png'); /* Затемняем фон, чтобы текст читался */
+        background-position: center;
+    }
+
+    .hero__title {
+        font-size: 36px;
+    }
+
+    .hero__subtitle {
+        font-size: 18px;
+    }
+
+    .offer__features {
+        grid-template-columns: 1fr; /* Колонки преимуществ в 1 ряд */
+    }
+
+    .offer__gallery {
+        grid-template-columns: repeat(2, 1fr); /* Галерея в 2 колонки */
+    }
+
+    .selection__filters {
+        grid-template-columns: 1fr; /* Фильтры в 1 колонку */
+    }
+
+    .credit__form-row {
+        flex-direction: column; /* Инпут и кнопка кредита друг под другом */
+    }
+
+    .credit__input {
+        width: 100%;
+    }
+
+    .credit__title {
+        font-size: 28px;
+    }
+
+    .footer__links {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .footer__bottom {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+}

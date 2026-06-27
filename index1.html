@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TANK — Авторусь</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+
+    <header class="header">
+        <!-- Верхняя линия -->
+        <div class="header__top">
+            <div class="container">
+                <div class="header__top-inner">
+                    <div class="header__address">
+                        <img src="media/map-pin.png" alt="" class="header__top-icon"> <!-- Если есть иконка карты -->
+                        Ярославское шоссе, владение 2 В, строение 3 (МКАД, 95 км)
+                    </div>
+                    <div class="header__top-nav">
+                        <a href="#" class="header__top-link">
+                            <img src="media/шестерня.png" alt=""> <span>Записаться на сервис</span>
+                        </a>
+                        <a href="#" class="header__top-link">
+                            <img src="media/скорость.png" alt=""> <span>Тест-драйв</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Основная линия -->
+        <div class="header__main">
+            <div class="container">
+                <div class="header__main-inner">
+                    <div class="header__brand">
+                        <img src="media/logo.png" alt="TANK" class="header__logo">
+                        <div class="header__brand-content">
+                            <span class="header__title">АВТОРУСЬ TANK</span>
+                            <div class="header__divider"></div>
+                            <span class="header__subtitle">Официальный дилер</span>
+                        </div>
+                    </div>
+
+                    <div class="header__contacts">
+                        <div class="header__phone-block">
+                            <a href="tel:+79999999999" class="header__phone">+7 (999) 999-99-99</a>
+                            <div class="header__status"><span>●</span> Мы на связи</div>
+                        </div>
+                        <a href="#" class="header__btn" onclick="showCallbackAlert(); return false;">
+    <img src="media/Button.png" alt="Заказать звонок">
+</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+    <div class="container">
+        <div class="hero__content">
+            <p class="hero__subtitle">Улучшим любые условия</p>
+            <h1 class="hero__title">TANK 500</h1>
+            <p class="hero__info">Осталось всего 5 автомобилей!</p>
+            <a href="#" class="hero__btn">
+                <img src="media/button2.png" alt="Получить предложение">
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="offer">
+    <div class="container">
+        <div class="offer__main">
+            <div class="offer__content">
+                <p class="offer__label">Только в АВТОРУСЬ!</p>
+                <h2 class="offer__title">TANK 300</h2>
+                <p class="offer__promo">ВЫГОДА ПО TRADE-IN ДО 450 000 ₽</p>
+                <div class="offer__warning">
+                    <img src="media/огрпредл.png" alt="Ограниченное предложение">
+                </div>
+                <div class="offer__btns">
+                    <a href="#"><img src="media/акция.png" alt=""></a>
+                    <a href="#"><img src="media/тестдрайв.png" alt=""></a>
+                    <a href="#"><img src="media/кредит.png" alt=""></a>
+                </div>
+            </div>
+
+            <div class="offer__image-block">
+                <img src="media/машина11.png" alt="" class="offer__car-img">
+                <img src="media/спеццена.png" alt="" class="offer__badge">
+                <!-- Точки выбора цвета для 300 модели обычно справа -->
+                <div class="offer__colors-side offer__colors-side--right">
+                    <img src="media/цвет.png" alt="">
+                </div>
+            </div>
+        </div>
+
+        <!-- Средний блок: Карточки преимуществ -->
+        <div class="offer__features">
+            <div class="feature-card">
+                <img src="media/чек.png" alt="">
+                <p>Автомобили в наличии с ПТС</p>
+            </div>
+            <div class="feature-card">
+                <img src="media/щит.png" alt="">
+                <p>Сервисная поддержка до 5 лет / 150 000 км</p>
+            </div>
+            <div class="feature-card">
+                <img src="media/купон.png" alt="">
+                <p>Улучшим любое предложение</p>
+            </div>
+            <div class="feature-card">
+                <img src="media/продажа.png" alt="">
+                <p>Кредит 0,01%</p>
+            </div>
+        </div>
+
+        <!-- Нижний блок: Галерея -->
+        <div class="offer__gallery">
+            <img src="media/машина1.png" alt="">
+            <img src="media/машина2.png" alt="">
+            <img src="media/машина3.png" alt="">
+            <img src="media/машина4.png" alt="">
+            <img src="media/машина5.png" alt="">
+        </div>
+    </div>
+</section>
+
+<section class="offer offer--reverse">
+    <div class="container">
+        <div class="offer__main">
+            <div class="offer__image-block">
+                <!-- Точки выбора цвета СЛЕВА от машины -->
+                <div class="offer__colors-side offer__colors-side--left">
+                    <img src="media/color1.png" alt="">
+                </div>
+                <img src="media/машина111.png" alt="" class="offer__car-img">
+                <img src="media/спеццена.png" alt="" class="offer__badge">
+            </div>
+
+            <div class="offer__content">
+                <p class="offer__label">Только в АВТОРУСЬ!</p>
+                <h2 class="offer__title">TANK 500</h2>
+                <p class="offer__promo">ВЫГОДА ДО 700 000 ₽</p>
+                <div class="offer__warning">
+                    <img src="media/огрпредл.png" alt="Ограниченное предложение">
+                </div>
+                <div class="offer__btns">
+                    <a href="#"><img src="media/акция.png" alt=""></a>
+                    <a href="#"><img src="media/тестдрайв.png" alt=""></a>
+                    <a href="#"><img src="media/кредит.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Средний блок: Карточки преимуществ (те же самые) -->
+        <div class="offer__features">
+            <div class="feature-card">
+                <img src="media/чек.png" alt="">
+                <p>Автомобили в наличии с ПТС</p>
+            </div>
+            <div class="feature-card">
+                <img src="media/щит.png" alt="">
+                <p>Сервисная поддержка до 5 лет / 150 000 км</p>
+            </div>
+            <div class="feature-card">
+                <img src="media/купон.png" alt="">
+                <p>Улучшим любое предложение</p>
+            </div>
+            <div class="feature-card">
+                <img src="media/продажа.png" alt="">
+                <p>Кредит 0,01%</p>
+            </div>
+        </div>
+
+        <!-- Нижний блок: Новая галерея TANK 500 -->
+        <div class="offer__gallery">
+            <img src="media/машина21.png" alt="">
+            <img src="media/машина22.png" alt="">
+            <img src="media/машина23.png" alt="">
+            <img src="media/машина24.png" alt="">
+            <img src="media/машина25.png" alt="">
+        </div>
+    </div>
+</section>
+
+<section class="selection">
+    <div class="container">
+        <h2 class="selection__title">ПОДБЕРИТЕ КОМПЛЕКТАЦИЮ</h2>
+
+        <!-- Фильтры -->
+        <div class="selection__filters">
+            <div class="filter-group">
+                <label>Модель</label>
+                <select><option>TANK 300</option></select>
+            </div>
+            <div class="filter-group">
+                <label>Комплектация</label>
+                <select><option>Любая</option></select>
+            </div>
+            <div class="filter-group">
+                <label>Двигатель</label>
+                <select><option>Любой</option></select>
+            </div>
+            <div style="text-align: center; margin-bottom: 30px;">
+    <button onclick="runComplexLogic()" style="padding: 15px 30px; background: #ff8c00; color: #fff; border: none; cursor: pointer; font-weight: bold; border-radius: 5px;">
+        ЗАПУСТИТЬ МАСТЕР ПОДБОРА (ЛР 10-12)
+    </button>
+</div>
+        </div>
+
+        <!-- Список карточек -->
+        <div class="selection__list">
+            
+            <!-- КАРТОЧКА 1 -->
+            <div class="config-card">
+                <div class="config-card__img">
+                    <img src="media/машина111.png" alt="TANK 300">
+                </div>
+                <div class="config-card__info">
+                    <h3 class="config-card__name">TANK 300</h3>
+                    <p class="config-card__specs">2.0 л. Бензин, Полный, Автоматическая</p>
+                    <div class="config-card__price">3 649 000 ₽</div>
+                    <div class="config-card__benefits">
+                        <div class="benefit-item">
+                            <img src="media/купон.png" alt=""> <span>Выгода по Trade-in до 450 000 ₽</span>
+                        </div>
+                        <div class="benefit-item">
+                            <img src="media/щит.png" alt=""> <span>Керамическое покрытие в подарок!</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="config-card__actions">
+                    <a href="#" class="btn-offer"><img src="media/предл.png" alt="Получить предложение"></a>
+                    <a href="#" class="btn-test"><img src="media/тестдрайв.png" alt="Тест-драйв"></a>
+                </div>
+            </div>
+
+            <!-- КАРТОЧКА 2 -->
+            <div class="config-card">
+                <div class="config-card__img">
+                    <img src="media/машина111.png" alt="TANK 300">
+                </div>
+                <div class="config-card__info">
+                    <h3 class="config-card__name">TANK 300</h3>
+                    <p class="config-card__specs">2.0 л. Бензин, Полный, Автоматическая</p>
+                    <div class="config-card__price">3 649 000 ₽</div>
+                    <div class="config-card__benefits">
+                        <div class="benefit-item">
+                            <img src="media/купон.png" alt=""> <span>Выгода по Trade-in до 450 000 ₽</span>
+                        </div>
+                        <div class="benefit-item">
+                            <img src="media/щит.png" alt=""> <span>Керамическое покрытие в подарок!</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="config-card__actions">
+                    <a href="#" class="btn-offer"><img src="media/предл.png" alt="Получить предложение"></a>
+                    <a href="#" class="btn-test"><img src="media/тестдрайв.png" alt="Тест-драйв"></a>
+                </div>
+            </div>
+
+            <!-- КАРТОЧКА 3 -->
+            <div class="config-card">
+                <div class="config-card__img">
+                    <img src="media/машина111.png" alt="TANK 300">
+                </div>
+                <div class="config-card__info">
+                    <h3 class="config-card__name">TANK 300</h3>
+                    <p class="config-card__specs">2.0 л. Бензин, Полный, Автоматическая</p>
+                    <div class="config-card__price">3 649 000 ₽</div>
+                    <div class="config-card__benefits">
+                        <div class="benefit-item">
+                            <img src="media/купон.png" alt=""> <span>Выгода по Trade-in до 450 000 ₽</span>
+                        </div>
+                        <div class="benefit-item">
+                            <img src="media/щит.png" alt=""> <span>Керамическое покрытие в подарок!</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="config-card__actions">
+                    <a href="#" class="btn-offer"><img src="media/предл.png" alt="Получить предложение"></a>
+                    <a href="#" class="btn-test"><img src="media/тестдрайв.png" alt="Тест-драйв"></a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="selection__more">
+            <a href="#"><img src="media/загруз.png" alt="Загрузить еще"></a>
+        </div>
+    </div>
+</section>
+
+<section class="credit">
+    <div class="container">
+        <div class="credit__inner">
+            <h2 class="credit__title">ОСТАВЬТЕ ЗАЯВКУ<br>НА КРЕДИТ</h2>
+            <p class="credit__subtitle">и получите одобрение за 1 день!</p>
+
+            <form class="credit__form">
+                <div class="credit__form-group">
+                    <label class="credit__label">Телефон</label>
+                    <div class="credit__form-row">
+                        <input type="tel" class="credit__input" placeholder="+7 (___) ___ - __ - __">
+                        <button type="submit" class="credit__submit">
+                            <img src="media/акция.png" alt="Отправить заявку">
+                        </button>
+                    </div>
+                </div>
+
+                <label class="credit__privacy">
+                    <input type="checkbox" class="credit__checkbox" checked>
+                    <span>Согласен на обработку персональных данных.</span>
+                </label>
+            </form>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container">
+        <!-- Верхняя линия разделитель -->
+        <div class="footer__divider"></div>
+
+        <!-- Первая строка: Бренд и Контакты -->
+        <div class="footer__row footer__row--main">
+            <div class="footer__brand">
+                <div class="footer__brand-title">АВТОРУСЬ TANK Лосиный Остров</div>
+                <div class="footer__brand-subtitle">Официальный дилер</div>
+            </div>
+            <div class="footer__contacts">
+                <div class="footer__phone-block">
+                    <a href="tel:+79999999999" class="footer__phone">+7 (999) 999-99-99</a>
+                    <div class="footer__status"><span>●</span> Мы на связи</div>
+                </div>
+                <a href="#" class="footer__btn">
+                    <img src="media/Button.png" alt="Заказать звонок">
+                </a>
+            </div>
+        </div>
+
+        <!-- Вторая строка: Адрес и Ссылки -->
+        <div class="footer__row footer__row--nav">
+            <div class="footer__address">
+                <img src="media/локация.png" alt="">
+                <span>Ярославское шоссе, владение 2 В, строение 3 (МКАД, 95 км)</span>
+            </div>
+            <div class="footer__links">
+                <a href="#" class="footer__link">
+                    <img src="media/шестерня.png" alt=""> Записаться на сервис
+                </a>
+                <a href="#" class="footer__link">
+                    <img src="media/скорость.png" alt=""> Тест-драйв
+                </a>
+            </div>
+        </div>
+
+        <!-- Третья строка: Юридическая информация -->
+        <div class="footer__row footer__row--legal">
+            <div class="footer__legal-title">Официальный дилер</div>
+            <div class="footer__legal-text">
+                ООО А АВТОРУСЬ МЫТИЩИ | ОГРН - 1147746695161, ИНН - 7728881903
+            </div>
+        </div>
+
+        <!-- Четвертая строка: Копирайт -->
+        <div class="footer__bottom">
+            <div class="footer__copy">© 2024, АВТОРУСЬ ТАНК</div>
+            <div class="footer__bottom-links">
+                <a href="javascript:void(0)" onclick="checkLegalAgreements()">Правовая информация</a>
+                <a href="#">Условия акции</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // (Способ 3: Внутренний скрипт)
+    console.log("Внутренний скрипт инициализирован. Добро пожаловать в TANK Авторусь!");
+</script>
+<script src="main.js"></script>
+</body>
+</html>
