@@ -1,13 +1,8 @@
-<?php
-$variant = 15;
-$lastName = "Колб"; 
-$firstName = "Роман"; 
-?>
 <!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Тематический контроль знаний<?php echo $variant; ?></title>
+    <title>Тематический контроль знаний15</title>
     
     <!-- Подключение внешнего файла стилей CSS -->
     <link rel="stylesheet" href="style1012.css">
@@ -45,7 +40,7 @@ $firstName = "Роман";
 </head>
 <body>
 
-    <h1>Тематический контроль знаний (Вариант №<?php echo $variant; ?>)</h1>
+    <h1>Тематический контроль знаний (Вариант №15)</h1>
 
     <!-- БЛОК ЗАДАНИЯ 1 -->
     <div class="task-block">
@@ -57,12 +52,12 @@ $firstName = "Роман";
     <!-- БЛОК ЗАДАНИЯ 2 -->
     <div class="task-block">
         <h3 class="task-title">Задание 2: Работа с операторами циклов (do..while)</h3>
-        <p>Вывод имени и фамилии n+5 раз (для Варианта №<?php echo $variant; ?> это <?php echo $variant; ?> + 5 = <?php echo ($variant + 5); ?> раз):</p>
+        <p>Вывод имени и фамилии n+5 раз (для Варианта №15 это 15 + 5 = 20 раз):</p>
         <div style="background: #fcfcfc; padding: 10px; border: 1px solid #eee;">
             <script>
-                const lastName = <?php echo json_encode($lastName); ?>;
-                const firstName = <?php echo json_encode($firstName); ?>;
-                const n = <?php echo $variant; ?>;
+                const lastName = "Колб";
+                const firstName = "Роман";
+                const n = 15;
                 const repetitions = n + 5; 
                 
                 let i = 0;
@@ -109,7 +104,7 @@ $firstName = "Роман";
         <script>
             const S1 = "Я люблю Беларусь";
             const S2 = "Я учусь в Политехническом колледже.";
-            const variant = <?php echo $variant; ?>;
+            const variant = 15;
             
             const s1Length = S1.length;
             const targetChar = S1.charAt(variant - 1); 
