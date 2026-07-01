@@ -10,7 +10,7 @@ $firstName = "Роман";
     <title>Тематический контроль знаний<?php echo $variant; ?></title>
     
     <!-- Подключение внешнего файла стилей CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style1012.css">
     
     <!-- Скрипты, размещаемые в HEAD -->
     <script>
